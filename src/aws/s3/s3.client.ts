@@ -14,6 +14,7 @@ export class S3ClientProvider {
         secretAccessKey: this.configService.get<string>('aws.secretAccessKey', ''),
       },
       endpoint: this.configService.get<string>('aws.endpoint', ''),
+      forcePathStyle: true,
     });
   }
 }
